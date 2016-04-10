@@ -12,4 +12,9 @@
 !/log/.keep
 /tmp
 
+# Ignore useless files
 .DS_Store
+.idea
+
+# Ignore file with sensitive information
+config/google.yml

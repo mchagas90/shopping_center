@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AV2 - Marcio Chagas</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div class="text-center">
+      <% flash.each do |key, value| %>
+
+        <% if key == "error" %>
+          <% @class = "alert alert-danger" %>
+        <% elsif key == "logged_out" %>
+          <% @class = "alert alert-warning" %>
+        <% end %>
+
+        <%= content_tag :div, class: @class do %>
+          <%if key == "logged_out" %>
+          <%= value %>
+          <a href="https://accounts.google.com/Logout">
+            <input type="button" value="Deslogar" class="btn btn-sm btn-danger"/>
+          </a>
+          <%else %>
+            <%= value %>
+          <% end %>
+        <% end %>
+
+      <% end %>
+
+      <h1> AV2 - Marcio Chagas</h1>
+
+      <%= yield %>
+
+    </div>
+  </body>
+</html>

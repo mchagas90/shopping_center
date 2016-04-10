@@ -1,14 +1,14 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nome:</strong>
   <%= @store.name %>
 </p>
 
 <p>
-  <strong>Registration code:</strong>
+  <strong>CNPJ:</strong>
   <%= @store.registration_code %>
 </p>
 
-<%= link_to 'Edit', edit_store_path(@store) %> |
-<%= link_to 'Back', stores_path %>
+<%= link_to 'Editar', edit_store_path(@store) %> |
+<%= link_to 'Voltar', stores_path %>

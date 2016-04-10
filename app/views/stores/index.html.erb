@@ -1,12 +1,12 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Stores</h1>
+<h1>Lojas</h1>
 
-<table>
+<table class="table table-hover">
   <thead>
     <tr>
-      <th>Name</th>
-      <th>Registration code</th>
+      <th>Nome</th>
+      <th>CNPJ</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -16,9 +16,9 @@
       <tr>
         <td><%= store.name %></td>
         <td><%= store.registration_code %></td>
-        <td><%= link_to 'Show', store %></td>
-        <td><%= link_to 'Edit', edit_store_path(store) %></td>
-        <td><%= link_to 'Destroy', store, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Exibir', store %></td>
+        <td><%= link_to 'Editar', edit_store_path(store) %></td>
+        <td><%= link_to 'Excluir', store, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,4 @@
 
 <br>
 
-<%= link_to 'New Store', new_store_path %>
+<%= link_to 'Cadastrar Loja', new_store_path, class: 'btn btn-primary' %>
