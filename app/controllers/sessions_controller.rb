@@ -13,16 +13,15 @@ class SessionsController < ApplicationController
       redirect_to root_path, :flash => { :success => "Bem-Vindo!" }
     else
       reset_session
-      redirect_to signin_path, :flash => { :error => "Login não permitido"}
+      # redirect_to signin_path, :flash => { :error => "Login não permitido" }
     end
   end
 
   def destroy
     reset_session
-    redirect_to signin_path, :flash => { :logged_out => "Saia da sua conta do Google!"}
+    redirect_to signin_path, :flash => { :logged_out => "Saia da sua conta do Google!" }
   end
 
   def new
   end
-
 end

@@ -20,7 +20,7 @@
         <td><%= link_to 'Editar', edit_store_path(store) %></td>
         <td><%= link_to 'Excluir', store, method: :delete, data: { confirm: 'Tem certeza?' } %></td>
       </tr>
-    <% end %>
+    <% end if current_user.admin?%>
   </tbody>
 </table>
 
